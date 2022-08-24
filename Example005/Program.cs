@@ -75,32 +75,32 @@
 // else Console.WriteLine( $"{a} не кратно {b} остаток {a%b}");
 
 
-Console.WriteLine("Введите первое целое число: ");
-int number1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите второе целое число: ");
-int number2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите первое целое число: ");
+// int number1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите второе целое число: ");
+// int number2 = Convert.ToInt32(Console.ReadLine());
 
-string Multiplicity(int num1, int num2)
-{
-    string multiplicity = String.Empty;
-    int max = num1;
-    int min = num2;
+// string Multiplicity(int num1, int num2)
+// {
+//     string multiplicity = String.Empty;
+//     int max = num1;
+//     int min = num2;
     
-    if (num2 > num1)
-    {
-        max = num2;
-        min = num1;
-    }
+//     if (num2 > num1)
+//     {
+//         max = num2;
+//         min = num1;
+//     }
 
-    if (max % min == 0)
-    {
-        multiplicity = $"Число {max} кратно {min}";
-    }
-    else
-    {
-        multiplicity = $"Число {max} не кратно {min}, остаток {max % min}";
-    }
+//     if (max % min == 0)
+//     {
+//         multiplicity = $"Число {max} кратно {min}";
+//     }
+//     else
+//     {
+//         multiplicity = $"Число {max} не кратно {min}, остаток {max % min}";
+//     }
 
-    return multiplicity;
-}
-Console.WriteLine(Multiplicity(number1, number2));
+//     return multiplicity;
+// }
+// Console.WriteLine(Multiplicity(number1, number2));
