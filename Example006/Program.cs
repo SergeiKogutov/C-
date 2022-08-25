@@ -1,17 +1,14 @@
 ﻿
-void DeleteSecondNumber1()
-{
-    Console.WriteLine("Enter number: ");
-    string number = Console.ReadLine();
+Console.WriteLine("Enter number: ");
+string number = Console.ReadLine();
     
-    for (int i = 0; i < number.Length; i++)
+for (int i = 0; i < number.Length; i++)
+{
+    if (i == 1)
     {
-        if (i == 1)
-        {
-            Console.Write(number[i]);
-        }
+        Console.Write(number[i]);
     }
-    Console.WriteLine();
 }
+Console.WriteLine();
 
-DeleteSecondNumber1();
+

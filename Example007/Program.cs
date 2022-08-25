@@ -1,5 +1,4 @@
-﻿void DeleteSecondNumber1()
-{
+﻿
     Console.WriteLine("Enter number: ");
     string number = Console.ReadLine();
     
@@ -16,6 +15,4 @@
         }
     }
     Console.WriteLine();
-}
 
-DeleteSecondNumber1();
