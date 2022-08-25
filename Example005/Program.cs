@@ -225,30 +225,32 @@
 //5 -> 1, 4, 9, 16, 25.
 //2 -> 1,4
 
-// void SquareTableN()
 // {
-//     Console.Write("Введите число ");
-//     int N = Convert.ToInt32(Console.ReadLine());
-//     int[] answer = new int[N];
-//     if (N > 0)
+//     void SquareTableN()
 //     {
-//         for (int i = 1; i < (N + 1); i++)
+//         Console.Write("Введите число ");
+//         int N = Convert.ToInt32(Console.ReadLine());
+//         int[] answer = new int[N];
+//         if (N > 0)
 //         {
-//             answer[i - 1] = (i * i);
+//             for (int i = 1; i < (N + 1); i++)
+//             {
+//                 answer[i - 1] = (i * i);
+//             }
 //         }
+//         else
+//             {
+//                 Console.Write("Надо было вводить положительные числа");
+//             }
+//         var str = string.Join(" ", answer);
+//         Console.WriteLine(str);
 //     }
-//     else
+//     try
 //         {
-//             Console.Write("Надо было вводить положительные числа");
+//             SquareTableN();
 //         }
-//     var str = string.Join(" ", answer);
-//     Console.WriteLine(str);
-// }
-// try
-// {
-//     SquareTableN();
-// }
-// catch
-// {
-//     Console.Write("Надо было вводить числа");
+//         catch
+//         {
+//             Console.Write("Надо было вводить числа");
+//         }
 // }
