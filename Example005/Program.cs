@@ -254,3 +254,128 @@
 //             Console.Write("Надо было вводить числа");
 //         }
 // }
+
+
+// Console.Write("введите ваше имя ");
+// string name = Console.ReadLine();
+ 
+// switch (name)
+//     {
+//     case "Bob":
+//         Console.WriteLine("Здарова, Bob");
+//         break;
+//     case "Tom":
+//         Console.WriteLine("Приве, Tom");
+//         break;
+//     case "Sam":
+//         Console.WriteLine("Как дела, Sam");
+//         break;
+//     default:
+//         Console.WriteLine("Приятно познакомиться, "+name);
+//         break;
+//     }
+
+
+// Задача 24: Напишите программу, которая принимает 
+// на вход число (А) и выдаёт сумму чисел от 1 до А.
+// 7 -> 28
+// 4 -> 10
+// 8 -> 36
+
+// int[] array={5, 6, 67, 54, 32, 23, 12, 12, 234};
+// foreach (int i in array) Console.Write($"{i}, ");
+// Console.WriteLine();
+// for (int i=0; i<array.Length; i++) Console.Write($"{array[i]}, ");
+// Console.WriteLine();
+
+
+// Задача 30: Напишите программу, которая выводит 
+// массив из N элементов, заполненный случайными 
+// целыми числами. N - целое число и задается с клавиатуры
+
+// Console.WriteLine("Введите целое число: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int [] numbers = new int[n];
+// for(int i = 0; i < n; i++)
+// {
+//     numbers[i] = new Random().Next(1,100);
+//     if (i!=n-1)  Console.Write($"{numbers[i]}, ");
+//     else Console.WriteLine($"{numbers[i]}");
+// }
+
+//Задача 30: Напишите программу, 
+//    которая выводит массив из N элементов,
+//    заполненный случайными целыми числами. 
+//    N - целое число и задается с клавиатуры.
+
+
+Random rd = new Random();
+Console.Write("Введите число: ");
+int N = Convert.ToInt32(Console.ReadLine());
+int[] arr = FillArray(N);
+
+int[] FillArray(int number)
+{
+    int[] array = new int[number];
+    for (int i = 0; i < N; i++)
+    {
+        array[i] = rd.Next(1, 100);
+    }
+    return array;
+}
+
+void printArray(int[] Array)
+{
+    foreach (int i in Array)
+    {
+        Console.Write($"{i}, ");
+    }
+    Console.WriteLine("");
+}
+
+double[] zadacha(int[] array)
+{
+    //max
+    //int N = array.Length;
+    int max = array[0];
+    int maxIndex = 0;
+    for (int i = 0; i < N; i++)
+        {
+            if (array[i] > max)
+            {
+                max = array[i];
+                maxIndex = i;
+            }
+        }
+
+    //min
+    int min = array[0];
+    int minIndex = 0;
+    for (int i = 0; i < N; i++)
+    {
+        if (array[i] < max)
+        {
+            min = array[i];
+            minIndex = i;
+        }
+    }
+
+    //average
+    double average = 0;
+    foreach(int i in array)
+    {
+        average += i;
+    }
+    average = average / array.Length;
+
+    double[] answer = {maxIndex, minIndex, average, max, min};
+    return answer;
+}
+//printArray(arr);
+double[] answer = zadacha(arr);
+Console.WriteLine($" max индекс = {answer[0]}");
+Console.WriteLine($" min индекс = {answer[1]}");
+Console.WriteLine($" average = {answer[2]}");
+Console.WriteLine($" max = {answer[3]}");
+Console.WriteLine($" min = {answer[4]}");
+
