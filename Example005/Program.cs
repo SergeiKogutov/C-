@@ -379,3 +379,155 @@
 // Console.WriteLine($" max = {answer[3]}");
 // Console.WriteLine($" min = {answer[4]}");
 
+
+// Задача 31: Задайте массив из 12 элементов, заполненный 
+// случайными числами из промежутка [-9, 9]. Найдите сумму 
+// отрицательных и положительных элементов массива.
+// Например, в массиве [3,9,-8,1,0,-7,2,-1,8,-3,-1,6] 
+// сумма положительных чисел равна 29, сумма отрицательных равна -20.
+
+// int [] numbers = new int[12];
+// for(int i = 0; i < 12; i++)
+// {
+//     numbers[i] = new Random().Next(-9,10);
+//     if (i!=12-1)  Console.Write($"{numbers[i]}, ");
+//     else Console.WriteLine($"{numbers[i]}");
+// }
+// int sum_p = 0;
+// int sum_n = 0;
+// string s = " ";
+// foreach (var item in numbers)
+// {
+//     if (item>0) 
+//     {
+//         sum_p+=item;
+//         s+=$"{item} + ";
+//     }
+//     else sum_n+=item;
+// }
+// Console.WriteLine($"Сумма положительных чисел {s} равна {sum_p}");
+// Console.WriteLine($"Сумма отрецательных чисел равна {sum_n}");
+
+
+// Задача 32: Напишите программу замена элементов массива: 
+// положительные элементы замените на соответствующие 
+// отрицательные, и наоборот.
+// [-4, -8, 8, 2] - [4, 8, -8, -2]
+
+// int [] numbers = new int[6];
+// for(int i = 0; i < 6; i++)
+// {
+//     numbers[i] = new Random().Next(-10,11);
+//     if (i!=6-1)  Console.Write($"{numbers[i]}, ");
+//     else Console.WriteLine($"{numbers[i]}");
+// }
+// Console.WriteLine();
+// for (int i = 0; i < 6; i++)
+// {
+//     if(numbers[i]> 0)
+//     {
+//         numbers[i] = -numbers[i];
+//         Console.Write($"{numbers[i]}, ");
+//     }
+//     else
+//     { 
+//         numbers[i] = numbers[i] * -1;
+//         Console.Write($"{numbers[i]}, ");
+//     }
+// }
+
+// Задача 33: Задайте массив. Напишите программу, которая 
+// определяет, присутствует ли заданное число в массиве.
+// 4; массив [6, 7, 19, 345, 3] -> нет
+// -3; массив [6, 7, 19, 345, 3] -> да
+
+
+// int [] numbers = new int[6];
+// for(int i = 0; i < 6; i++)
+// {
+//     numbers[i] = new Random().Next(-10,11);
+//     if (i!=6-1)  Console.Write($"{numbers[i]}, ");
+//     else Console.WriteLine($"{numbers[i]}");
+// }
+// Console.WriteLine();
+
+// Console.Write("Write numbers: ");
+// int x = Convert.ToInt32(Console.ReadLine());
+// bool faid = false;
+// foreach (var item in numbers)
+// {
+//     if (x == item)
+//     {
+//         faid = true;
+//         break;
+//     }
+// }
+// if(faid) Console.WriteLine("yes");
+// else Console.WriteLine("no");
+
+// Задача 35: Задайте одномерный массив из 123 случайных чисел. 
+// Найдите количество элементов массива, значения которых лежат 
+// в отрезке [10,99]. 
+// Пример для массива из 5, а не 123 элементов. В своём решении 
+// сделайте для 123
+// [5, 18, 123, 6, 2] -> 1
+// [1, 2, 3, 6, 2] -> 0
+// [10, 11, 12, 13, 14] -> 5
+
+
+// int [] numbers = new int[15];
+// for(int i = 0; i < 15; i++)
+// {
+//     numbers[i] = new Random().Next(0,1000);
+//     if (i!=15-1)  Console.Write($"{numbers[i]}, ");
+//     else Console.WriteLine($"{numbers[i]}");
+// }
+// Console.WriteLine();
+// int count = 0;
+// for (int i = 0; i < 15; i++)
+// {
+//     if (numbers[i]> 9 && numbers[i]<100)
+//     {
+//         count= count + 1;
+//     }
+// }
+// Console.WriteLine($"количество чисел от 10 до 100 : {count} .");
+
+
+// Задача 37: Найдите произведение пар чисел в одномерном массиве. 
+// Парой считаем первый и последний элемент, второй и предпоследний 
+// и т.д. Результат запишите в новом массиве.
+// [1 2 3 4 5] -> 5 8 3
+// [6 7 3 6] -> 36 21б
+
+
+// Console.Write("Введите размер массива: ");   
+// int N = Convert.ToInt32(Console.ReadLine());
+// int[] array = new int[N];    //Создали массив заданной размерности
+// for (int i = 0; i < N; ++i)  // Заполняем массив случайными числами от 1 до 9
+// {
+//     array[i] = new Random().Next(1, 10);
+// }
+// Console.Write("[");                     //Красиво выводим массив
+// for (int i = 0; i < N - 1; ++i)
+// {
+//     Console.Write(array[i] + " ");
+// }
+// Console.WriteLine(array[N - 1] + "]");
+// int[] result = new int[N / 2 + N % 2]; //Создаём массив для хранения результата 
+//                                        //(При чётном размер будет равен размеру изначального массива, делённому на 2,
+//                                        //при нечётном, к этому будет добавлена единица.)
+
+// for(int i = 0; i < array.Length / 2; ++i) //Фиксируем результаты произведений всех пар элементов
+// {
+//     result[i] = array[i] * array[array.Length - 1 - i];
+// }
+// if(array.Length % 2 == 1)  // Фиксируем оставшийся элемент при нечётном количестве элементов
+// {
+//     result[array.Length / 2] = array[array.Length / 2];
+// }
+// for (int i = 0; i < result.Length - 1; ++i) //Выводим на экран результирующий массив
+// {
+//     Console.Write(result[i] + " ");
+// }
+// Console.WriteLine(result[result.Length - 1]);
