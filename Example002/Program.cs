@@ -4,14 +4,14 @@ int b = Convert.ToInt32(Console.ReadLine());
 int y = Convert.ToInt32(Console.ReadLine());
 int max = a;
 
-if (max < b) 
+if (max < b)
 {
     max = b;
 }
 
 if (max < y)
 {
-    max = y; 
+    max = y;
 }
 
 Console.WriteLine(max + " самое большое из трёх ");

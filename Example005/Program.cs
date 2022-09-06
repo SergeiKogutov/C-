@@ -28,7 +28,7 @@
 // {
 //     Console.WriteLine("Enter number: ");
 //     string number = Console.ReadLine();
-    
+
 //     for (int i = 0; i < number.Length; i++)
 //     {
 //         if (i != 1)
@@ -85,7 +85,7 @@
 //     string multiplicity = String.Empty;
 //     int max = num1;
 //     int min = num2;
-    
+
 //     if (num2 > num1)
 //     {
 //         max = num2;
@@ -239,26 +239,27 @@
 //             }
 //         }
 //         else
-//             {
-//                 Console.Write("Надо было вводить положительные числа");
-//             }
+//         {
+//             Console.Write("Надо было вводить положительные числа");
+//         }
 //         var str = string.Join(" ", answer);
 //         Console.WriteLine(str);
 //     }
+
 //     try
-//         {
-//             SquareTableN();
-//         }
-//         catch
-//         {
-//             Console.Write("Надо было вводить числа");
-//         }
+//     {
+//         SquareTableN();
+//     }
+//     catch
+//     {
+//         Console.Write("Надо было вводить числа");
+//     }
 // }
 
 
 // Console.Write("введите ваше имя ");
 // string name = Console.ReadLine();
- 
+
 // switch (name)
 //     {
 //     case "Bob":
