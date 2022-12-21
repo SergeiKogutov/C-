@@ -1,8 +1,13 @@
-number = int(input('Введите число:'))
-number = abs(number)
-negative = number*-1
-while negative < number:
-    print(f"{negative}, ")
-    negative=negative+1
-else:
-    print(number)
+# Задача 2. Напишите программу, которая принимает на вход 
+# координаты двух точек и находит расстояние между ними в 2D пространстве.
+# A (3,6); B (2,1) -> 5,09
+# A (7,-5); B (1,-1) -> 7,21
+
+x1 = float(input('Введите x первой точки:'))
+y1 = float(input('Введите y первой точки:'))
+x2 = float(input('Введите x второй точки:'))
+y2 = float(input('Введите y второй точки:'))
+
+import math
+distans = math.sqrt((x1-x2)**2+(y1-y2)**2)
+print(f'Растояние между точкой A до точки B = {distans}' )
