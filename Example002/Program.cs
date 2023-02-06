@@ -86,6 +86,6 @@ void Task42() {
     int x = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine($"{x} -> {ConvertToBinary(x)}");
 }
-
-//Task40();
+Task1();
+Task40();
 Task42();
